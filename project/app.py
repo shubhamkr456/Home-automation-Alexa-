@@ -32,7 +32,6 @@ def index():
         if request.form['submit'] == 'Turn On': 
             print ("TURN ON")
             GPIO.output(led_pin,GPIO.HIGH)
-            GPIO.cleanup()
 
             # turn on LED on arduino
             #stop automation
