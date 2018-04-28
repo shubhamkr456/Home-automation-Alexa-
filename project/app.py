@@ -8,7 +8,7 @@ import time
 import RPi.GPIO as GPIO
 
 app= Flask(__name__)
-GPIO.cleanup()
+#GPIO.cleanup()
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 #wsgi_app = app.wsgi_app
