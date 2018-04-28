@@ -45,7 +45,7 @@ def index():
             print("Fan Turned On")
             GPIO.output(fan,GPIO.HIGH)
             time.sleep(2)
-        elif request.output.form['submit'] =='TurnoffF':
+        elif request.output.form['submit'] =='TurnOffF':
             print("FanTurnedOff")
             GPIO.output(fan,GPIO.LOW)
             time.sleep(4)
