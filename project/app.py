@@ -32,6 +32,7 @@ def index():
         if request.form['submit'] == 'Turn On': 
             print ("TURN ON")
             GPIO.output(led_pin,GPIO.HIGH)
+            GPIO.cleanup()
 
             # turn on LED on arduino
             #stop automation
@@ -44,11 +45,9 @@ def index():
         elif request.form['submit'] =="TurnOnF":
             print("Fan Turned On")
             GPIO.output(fan,GPIO.HIGH)
-            time.sleep(2)
         elif request.form['submit'] =='TurnOffF':
             print("FanTurnedOff")
             GPIO.output(fan,GPIO.LOW)
-            time.sleep(4)
         elif request.form['submit'] == 'manual':
             f= open("abc.txt", "w+")
             f.write("manual\n")
@@ -69,4 +68,4 @@ def index():
     return render_template('index.html', author=author, value=0)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5040, debug=True)
+    app.run(host='0.0.0.0',port=5050, debug=True)
