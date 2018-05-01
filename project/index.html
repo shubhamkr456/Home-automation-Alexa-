@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+   <head>
+      <title>GPIO Control</title>
+      <link rel="stylesheet" href='../static/master.css'/>
+   </head>
+
+   <body>
+		<h1>RPi GPIO Control</h1>
+		
+		<br>
+		
+		<h2> Actuator Status </h2>
+		<h3> RED LED ==>  {{ ledRed  }}</h3>
+		<h3> YLW LED ==>  {{ ledYlw  }}</h3>
+		
+		<br>
+		<h2> Commands </h2>
+		<h3> 
+			RED LED Ctrl ==> 
+			<a href="/ledRed/on" class="button">TURN ON</a>  
+			<a href="/ledRed/off"class="button">TURN OFF</a>
+		</h3>
+		<h3> 
+			YLW LED Ctrl ==> 
+			<a href="/ledYlw/on" class="button">TURN ON</a>  
+			<a href="/ledYlw/off"class="button">TURN OFF</a>
+		</h3>
+		
+		<h2> 
+			YLW LED Ctrl ==> 
+			<a href="/manual" class="button">Manual</a>  
+			<a href="/automatic" class="button">Automatic</a>
+		</h2>
+		
+   </body>
+</html>
